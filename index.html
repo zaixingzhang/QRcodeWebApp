@@ -9,10 +9,41 @@
 
     <title>二维码生成器</title>
 	
-	<body>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">  
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+  </head>
 
-  	<script src="js/jquery-1.11.1.min.js"></script>
-	  <script src="js/bootstrap.min.js"></script>
+  <body>
+
+		<div class="page">
+			<!-- 页面头部导航 -->
+	   	<header role="banner">
+	   		<h3>二维码生成器</h3>
+	   		<nav role="navigation">
+	   			<ul class="list-inline text-center">
+	   				<li><a href="#">文本</a></li>
+	   				<li><a href="#">网址</a></li>
+	   				<li><a href="#">名片</a></li>
+	   			</ul>
+	   		</nav>
+	   	</header>
+			<!-- 页面主体内容 -->
+		  <div class="contianer">
+		  	<!-- 输入框 -->
+		  	<div class="input-group">
+		  		<input type="text" class="form-control">
+		  		<span class="input-group-btn"><button class="btn btn-default">生 成</button></span>
+		  	</div>
+				<!-- 二维码的容器 -->
+		  	<div id="qrcode">
+		  		
+		  	</div>
+		  </div>
+		  <!-- 页面页脚 -->
+		  <footer class="text-center">
+		  	<p>制作人：张在兴 毛景山</p>
+		  </footer>
+		</div>
 		
 	</body>
 </html>
