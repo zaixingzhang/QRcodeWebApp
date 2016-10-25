@@ -35,8 +35,8 @@
 			  	<!-- 输入框 -->
 			  	<div class="content">
 				  	<div class="input-group">
-				  		<input type="text" class="form-control" placeholder="在这里输入文本">
-				  		<span class="input-group-btn"><button class="btn btn-default">生 成</button></span>
+				  		<input type="text" id="qrcode-content" class="form-control" placeholder="在这里输入文本">
+				  		<span class="input-group-btn"><button id="create-btn" class="btn btn-default">生 成</button></span>
 				  	</div>
 
 			  		<!-- 二维码的容器 -->
@@ -57,5 +57,31 @@
 		
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" src="js/to-utf8.js"></script>
+
+		<script>
+			jQuery(function(){
+				jQuery('#qrcode').qrcode(toUtf8("欢迎使用二维码生成器"));
+				canvasToImage();
+				
+				jQuery("#create-btn").click(function(){
+					jQuery("#qrcode").empty();	/*清除canvas*/
+					jQuery("#qrcode").qrcode(toUtf8(jQuery("#qrcode-content").val()));
+					
+					canvasToImage();	/*将canvas转换成图片然后插入*/
+				});
+			});
+			
+			/*
+			*canvasToImage:函数将canvas中的内容转换成png图像，然后在浏览器中就可以右击(手机中长按)->保存
+			*/
+			function canvasToImage() {
+				var mycanvas = document.getElementsByTagName("canvas");
+				var image = mycanvas[0].toDataURL("image/png");
+				var ement = "<img src='"+image+"'>";
+				jQuery("#qrcode").empty();
+				jQuery("#qrcode").append(ement);
+			}
+		</script>
 	</body>
 </html>
