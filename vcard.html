@@ -21,11 +21,12 @@
 				<!-- 页面头部导航 -->
 			   	<header role="banner" class="masthead clearfix">
 			   		<nav role="navigation" class="inner">
-			   			<h3 class="masthead-brand">二维码生成器</h3>
+			   			<h3 class="masthead-brand"><a href="http://glyphicons.com/"><span class="glyphicon glyphicon-qrcode"></span></a>&nbsp;&nbsp;二维码生成器</h3>
 			   			<ul class="nav masthead-nav">
 			   				<li><a href="index.html">文本</a></li>
 			   				<li><a href="web-url.html">网址</a></li>
 			   				<li class="active"><a href="vcard.html">名片</a></li>
+			   				<li><a href="wifi.html">WIFI</a></li>
 			   			</ul>
 			   		</nav>
 			   	</header>
@@ -33,11 +34,42 @@
 			  
 			  	<!-- 输入框 -->
 			  	<div class="content">
-				  	<div class="input-group">
-				  		<input type="text" class="form-control">
-				  		<span class="input-group-btn"><button class="btn btn-default">生 成</button></span>
-				  	</div>
+				  	<div class="input-group input-group-sm">
+  						<span class="input-group-addon">姓 名</span>
+  						<input type="text" class="form-control" placeholder="在这里填写名字">
+						</div>
+						
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">电 话</span>
+  						<input type="text" class="form-control" placeholder="在这里填写的的电话号码或者手机号">
+						</div>
 
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">Email</span>
+  						<input type="text" class="form-control" placeholder="在这里填写你的电子邮箱">
+						</div>
+
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">单 位</span>
+  						<input type="text" class="form-control" placeholder="在这里填写你的单位名称">
+						</div>
+
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">职 位</span>
+  						<input type="text" class="form-control" placeholder="在这里填写你的职位">
+						</div>
+
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">网 址</span>
+  						<input type="text" class="form-control" placeholder="在这里填写你的网址">
+						</div>
+
+						<div class="input-group input-group-sm">
+  						<span class="input-group-addon">地 址</span>
+  						<input type="text" class="form-control" placeholder="在这里填写你的地址">
+						</div>
+						
+						<button class="btn btn-default">生 成</button>
 			  		<!-- 二维码的容器 -->
 				  	<div id="qrcode">
 				  		

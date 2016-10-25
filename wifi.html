@@ -23,10 +23,10 @@
 			   		<nav role="navigation" class="inner">
 			   			<h3 class="masthead-brand"><a href="http://glyphicons.com/"><span class="glyphicon glyphicon-qrcode"></span></a>&nbsp;&nbsp;二维码生成器</h3>
 			   			<ul class="nav masthead-nav">
-			   				<li class="active"><a href="index.html">文本</a></li>
+			   				<li><a href="index.html">文本</a></li>
 			   				<li><a href="web-url.html">网址</a></li>
 			   				<li><a href="vcard.html">名片</a></li>
-			   				<li><a href="wifi.html">WIFI</a></li>
+			   				<li class="active"><a href="wifi.html">WIFI</a></li>
 			   			</ul>
 			   		</nav>
 			   	</header>
@@ -34,10 +34,27 @@
 			  
 			  	<!-- 输入框 -->
 			  	<div class="content">
-				  	<div class="input-group">
-				  		<input type="text" class="form-control" placeholder="在这里输入文本">
-				  		<span class="input-group-btn"><button class="btn btn-default">生 成</button></span>
-				  	</div>
+				  	<div class="input-group input-group-sm">
+  						<span class="input-group-addon">SSID</span>
+  						<input type="text" class="form-control" placeholder="在这里输入网址">
+					</div>
+					<div class="input-group input-group-sm">
+  						<span class="input-group-addon">密码</span>
+  						<input type="text" class="form-control" placeholder="在这里输入网址">
+					</div>
+					
+					<div class="input-group input-group-sm">
+  						<span class="input-group-addon">加密类型</span>
+  							<select class="form-control" name="" id="pass-select">
+  								<option value="wpa">WPA/WPA2</option>
+  								<option value="wep">WEP</option>
+  								<option value="nopass">无密码</option>
+  							</select>
+					</div>
+					
+					<button class="btn btn-default">生 成</button>
+					
+					
 
 			  		<!-- 二维码的容器 -->
 				  	<div id="qrcode">
@@ -54,6 +71,6 @@
 			  </div>
 			</div>
 		</div>
-		
+
 	</body>
 </html>
