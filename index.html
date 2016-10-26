@@ -65,7 +65,7 @@
 				canvasToImage();
 				
 				jQuery("#create-btn").click(function(){
-					jQuery("#qrcode").empty();	/*清除canvas*/
+					jQuery("#qrcode").empty();	/*清空 #qrcode*/
 					jQuery("#qrcode").qrcode(toUtf8(jQuery("#qrcode-content").val()));
 					
 					canvasToImage();	/*将canvas转换成图片然后插入*/
