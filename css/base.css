@@ -105,6 +105,13 @@ body {
   }
 }
 
+#qrcode {
+  margin-top: 25px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+}
+
 /*
  * 页脚
  */
